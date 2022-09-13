@@ -1,5 +1,6 @@
 package com.sunnyweather.android.ui.place
 
+import android.util.Log
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.Transformations
 import androidx.lifecycle.ViewModel
@@ -16,7 +17,9 @@ class PlaceViewModel : ViewModel() {
         Repository.searchPlaces(query)
     }
 
+
     fun searchPlace(query:String){
         searchLiveData.value = query
+        Log.d("searchplace",searchLiveData.value.toString())
     }
 }
